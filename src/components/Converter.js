@@ -9,6 +9,10 @@ export default function hexRgb(hex) {
     hex: hex,
   };
 
+    if (hex.length < 7) {
+    return '';
+    }
+
 	if (typeof hex !== 'string' || nonHexChars.test(hex) || !validHexSize.test(hex)) {
     result.rgb = 'Ошибка!';
     result.background = 'rgb(255, 0, 0)'
